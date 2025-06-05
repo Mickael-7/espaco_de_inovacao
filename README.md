@@ -21,23 +21,18 @@ Siga estas instruções para obter uma cópia do projeto em execução na sua m�
 ### **Pré-requisitos**
 
 * **Node.js**: Versão 18.x ou superior. Você pode baixá-lo em [nodejs.org](https://nodejs.org/).
-* **pnpm**: Este projeto utiliza `pnpm` como gerenciador de pacotes. Se você não o tiver instalado, pode instalá-lo globalmente com o npm (que vem com o Node.js):
-    ```bash
-    npm install -g pnpm
-    ```
 
 ### **Instalação**
 
-1.  **Clone o repositório** (se você ainda não o fez):
+1.  **Clone o repositório**:
     ```bash
-    git clone https://SEU_REPOSITORIO_GIT_AQUI/sete-colinas-vite.git
+    git clone https://github.com/Mickael-7/espaco_de_inovacao.git
     cd sete-colinas-vite
     ```
-    *Substitua `https://SEU_REPOSITORIO_GIT_AQUI/sete-colinas-vite.git` pelo URL real do seu repositório Git.*
 
 2.  **Instale as dependências** usando `pnpm`:
     ```bash
-    pnpm install
+    npm install
     ```
     Este comando irá baixar e instalar todas as bibliotecas e pacotes necessários listados no arquivo `package.json`.
 
@@ -46,4 +41,4 @@ Siga estas instruções para obter uma cópia do projeto em execução na sua m�
 Para iniciar o servidor de desenvolvimento local, execute o seguinte comando:
 
 ```bash
-pnpm dev
+npm run dev
