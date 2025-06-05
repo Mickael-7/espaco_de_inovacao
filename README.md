@@ -27,7 +27,7 @@ Siga estas instruções para obter uma cópia do projeto em execução na sua m�
 1.  **Clone o repositório**:
     ```bash
     git clone https://github.com/Mickael-7/espaco_de_inovacao.git
-    cd sete-colinas-vite
+    cd espaco-inovacao
     ```
 
 2.  **Instale as dependências** usando `pnpm`:
