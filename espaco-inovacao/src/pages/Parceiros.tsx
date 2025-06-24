@@ -1,12 +1,10 @@
-
 import { Building2, GraduationCap, Globe, Users } from "lucide-react";
 import { PageTransition } from "../components/page-transition";
 import { PageHeader } from "../components/page-header";
 import { FadeIn } from "../animations/fade-in";
-import { StaggerContainer } from "../animations/stagger-container";
-import { PartnerLogo } from "../components/partner-logo";
-import { StaggerItem } from "../animations/stagger-item";
 import { Button } from "../components/ui/button";
+import { ParceirosGrid } from "../components/ParceirosGrid";
+import { parceirosAcademicos, parceirosEmpresariais, parceirosInstitucionais } from "../data/parceiros";
 
 export default function ParceirosPage() {
   return (
@@ -24,7 +22,7 @@ export default function ParceirosPage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-700">
-              Nossa rede é composta por diferentes tipos de organizações que contribuem para o sucesso do ecossistema
+              Nossa rede é composta por diferentes tipos de organizações que contribuem para o sucesso do ecossistema.
             </p>
           </FadeIn>
 
@@ -75,14 +73,7 @@ export default function ParceirosPage() {
           <FadeIn>
             <h2 className="text-3xl font-bold text-center mb-12">Parceiros Empresariais</h2>
           </FadeIn>
-
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12">
-            {Array.from({ length: 18 }).map((_, i) => (
-              <StaggerItem key={i}>
-                <PartnerLogo name={`Empresa ${i + 1}`} />
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+          <ParceirosGrid parceiros={parceirosEmpresariais} />
         </div>
       </section>
 
@@ -92,14 +83,7 @@ export default function ParceirosPage() {
           <FadeIn>
             <h2 className="text-3xl font-bold text-center mb-12">Parceiros Acadêmicos</h2>
           </FadeIn>
-
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
-            {Array.from({ length: 10 }).map((_, i) => (
-              <StaggerItem key={i}>
-                <PartnerLogo name={`Universidade ${i + 1}`} />
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+          <ParceirosGrid parceiros={parceirosAcademicos} gridCols="grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5" />
         </div>
       </section>
 
@@ -109,14 +93,7 @@ export default function ParceirosPage() {
           <FadeIn>
             <h2 className="text-3xl font-bold text-center mb-12">Parceiros Institucionais</h2>
           </FadeIn>
-
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12">
-            {Array.from({ length: 12 }).map((_, i) => (
-              <StaggerItem key={i}>
-                <PartnerLogo name={`Instituição ${i + 1}`} />
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+          <ParceirosGrid parceiros={parceirosInstitucionais} />
         </div>
       </section>
 
@@ -128,59 +105,26 @@ export default function ParceirosPage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="text-lg text-center max-w-3xl mx-auto mb-12 text-white/90">
-              Descubra as vantagens de fazer parte da nossa rede de parceiros
+              Descubra as vantagens de fazer parte da nossa rede de parceiros.
             </p>
           </FadeIn>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <FadeIn delay={0.2}>
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3">Acesso ao Ecossistema</h3>
-                <p className="text-white/80">
-                  Conecte-se com startups, empreendedores, investidores e outros parceiros estratégicos.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.3}>
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3">Inovação Aberta</h3>
-                <p className="text-white/80">
-                  Participe de projetos colaborativos e tenha acesso a tecnologias e soluções inovadoras.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.4}>
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3">Visibilidade</h3>
-                <p className="text-white/80">
-                  Aumente a visibilidade da sua marca junto ao ecossistema de inovação regional.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.5}>
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3">Desenvolvimento</h3>
-                <p className="text-white/80">
-                  Contribua para o desenvolvimento econômico e social da região através da inovação.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.6}>
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3">Networking</h3>
-                <p className="text-white/80">
-                  Amplie sua rede de contatos e identifique novas oportunidades de negócio.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.7}>
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3">Conhecimento</h3>
-                <p className="text-white/80">
-                  Acesse conhecimento especializado e participe de eventos exclusivos para parceiros.
-                </p>
-              </div>
-            </FadeIn>
+            {[
+              { title: "Acesso ao Ecossistema", desc: "Conecte-se com startups, empreendedores, investidores e outros parceiros estratégicos." },
+              { title: "Inovação Aberta", desc: "Participe de projetos colaborativos e tenha acesso a tecnologias e soluções inovadoras." },
+              { title: "Visibilidade", desc: "Aumente a visibilidade da sua marca junto ao ecossistema de inovação regional." },
+              { title: "Desenvolvimento", desc: "Contribua para o desenvolvimento econômico e social da região através da inovação." },
+              { title: "Networking", desc: "Amplie sua rede de contatos e identifique novas oportunidades de negócio." },
+              { title: "Conhecimento", desc: "Acesse conhecimento especializado e participe de eventos exclusivos para parceiros." },
+            ].map((beneficio, i) => (
+              <FadeIn key={i} delay={0.2 + i * 0.1}>
+                <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                  <h3 className="text-xl font-bold mb-3">{beneficio.title}</h3>
+                  <p className="text-white/80">{beneficio.desc}</p>
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
@@ -204,5 +148,5 @@ export default function ParceirosPage() {
         </div>
       </section>
     </PageTransition>
-  )
+  );
 }
