@@ -8,20 +8,26 @@ import { StatCard } from "../components/stat-card"
 import { ProgramCard } from "../components/program-card"
 import { NewsCard } from "../components/news-card"
 import { Button } from "../components/ui/button"
-import { ParceirosGrid } from "../components/ParceirosGrid"
-import { parceirosEmpresariais } from "../data/parceiros"
+import { parceirosAcademicos, parceirosEmpresariais, parceirosInstitucionais } from "../data/parceiros"
 
 export default function Home() {
+  const allParceiros = [...parceirosEmpresariais, ...parceirosAcademicos, ...parceirosInstitucionais]
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Seção Hero */}
       <section className="relative h-[600px] w-full overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-green-900/80 z-10"></div>
-        <img
-          src="/placeholder.svg?height=600&width=1920"
-          alt="Colaboração e inovação"
-          className="absolute inset-0 object-cover w-full h-full"
-        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-green-900/80 z-10" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 object-cover w-full h-full z-0"
+        >
+          <source src="https://res.cloudinary.com/dydrdwjwb/video/upload/v1750777786/1236-144355017_whw98q.mp4" type="video/mp4" />
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
         <div className="container relative z-20 mx-auto px-4 h-full flex flex-col justify-center">
           <div className="max-w-3xl">
             <FadeIn>
@@ -223,7 +229,32 @@ export default function Home() {
             </p>
           </FadeIn>
 
-          <ParceirosGrid parceiros={parceirosEmpresariais} />
+          <FadeIn delay={0.2}>
+            <div
+              className="relative w-full overflow-hidden"
+            >
+                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
+                <div className="flex w-max animate-infinite-scroll">
+                    {[...allParceiros, ...allParceiros].map((parceiro, index) => (
+                      <a 
+                        href={parceiro.websiteUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        title={parceiro.nome}
+                        key={`${parceiro.nome}-${index}`}
+                        className="flex-shrink-0 mx-8 flex items-center justify-center h-24"
+                      >
+                        <img
+                          src={parceiro.logoUrl}
+                          alt={parceiro.nome}
+                          className="max-h-16 w-auto object-contain transition-transform duration-300 hover:scale-110"
+                        />
+                      </a>
+                    ))}
+                </div>
+                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
+            </div>
+          </FadeIn>
 
           <FadeIn delay={0.4} className="flex justify-center mt-10">
             <Link to="/parceiros">
