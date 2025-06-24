@@ -3,7 +3,7 @@ import { StaggerItem } from "../animations/stagger-item";
 import { PartnerLogo } from "../components/partner-logo";
 
 interface ParceirosGridProps {
-  parceiros: { nome: string; logoUrl: string; bgColor?: string }[];
+  parceiros: { nome: string; logoUrl: string; bgColor?: string; websiteUrl?: string }[];
   gridCols?: string;
 }
 
@@ -15,7 +15,8 @@ export function ParceirosGrid({ parceiros,gridCols = "grid-cols-[repeat(auto-fit
           <PartnerLogo
             name={parceiro.nome}
             logoUrl={parceiro.logoUrl}
-            bgColor={parceiro.bgColor} 
+            bgColor={parceiro.bgColor}
+            websiteUrl={parceiro.websiteUrl}
           />
         </StaggerItem>
       ))}
