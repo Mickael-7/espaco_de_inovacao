@@ -2,7 +2,7 @@
 
 Bem-vindo ao repositório do site do Espaço de Inovação Sete Colinas. Este projeto é uma aplicação web moderna e responsiva construída com **React**, **Vite**, **TypeScript** e **Tailwind CSS**. Ele serve como o hub digital para o nosso ecossistema de inovação, conectando empreendedores, empresas e conhecimento.
 
-deploy: https://espaco-de-inovacao.vercel.app/
+deploy: https://colinasdeinovacao-upe.vercel.app/
 
 ## ✨ Funcionalidades
 
