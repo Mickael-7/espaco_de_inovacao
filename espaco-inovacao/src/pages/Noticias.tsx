@@ -15,6 +15,7 @@ export default function NoticiasPage() {
       <PageHeader
         title="Notícias e Eventos"
         subtitle="Fique por dentro das novidades e acontecimentos do Espaço Colinas de Inovação"
+        videoSrc="https://res.cloudinary.com/dydrdwjwb/video/upload/v1750777786/1236-144355017_whw98q.mp4"
       />
 
       {/* Filtros e Busca */}
