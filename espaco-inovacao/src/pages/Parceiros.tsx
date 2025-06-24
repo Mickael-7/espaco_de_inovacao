@@ -12,6 +12,7 @@ export default function ParceirosPage() {
       <PageHeader
         title="Nossos Parceiros"
         subtitle="Conheça as organizações que fortalecem nosso ecossistema de inovação"
+        videoSrc="https://res.cloudinary.com/dydrdwjwb/video/upload/v1750777786/1236-144355017_whw98q.mp4"
       />
 
       {/* Categorias de Parceiros */}
