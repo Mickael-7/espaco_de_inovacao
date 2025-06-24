@@ -10,7 +10,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="relative h-12 w-48">
               <img
-                src="/placeholder.svg?height=48&width=192"
+                src="https://res.cloudinary.com/dydrdwjwb/image/upload/v1748390918/colinas-black_1_l0kvvp.png"
                 alt="Espaço Colinas de Inovação"
                 className="object-contain brightness-0 invert w-full h-full"
               />
