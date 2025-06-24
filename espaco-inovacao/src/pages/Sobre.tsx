@@ -150,7 +150,7 @@ export default function SobrePage() {
                 name="Emanoele Neves de Oliveira"
                 role="Desenvolvedora de Software"
                 bio="Especialista em desenvolvimento web, focada na criação de soluções digitais inovadoras para startups."
-                image="https://media.licdn.com/dms/image/v2/D4D35AQGoVYexRxSbbg/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1699984532218?e=1749488400&v=beta&t=F0WxsMzgdbZM1LKCSajVGzY6QVfD1Q28cxhsrbffHnQ"
+                image="https://media.licdn.com/dms/image/v2/D4D35AQGoVYexRxSbbg/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1699984532218?e=1751378400&v=beta&t=mLCWrjNgDOLvj5aUHLvbhTWR3zntYOBDxNDktAUyZQ8"
                 linkedin="https://www.linkedin.com/in/emanoele-neves-67690329b/"
               />
             </StaggerItem>
