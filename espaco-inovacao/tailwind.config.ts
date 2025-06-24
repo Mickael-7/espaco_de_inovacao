@@ -1,11 +1,11 @@
 import type { Config } from "tailwindcss"
-import tailwindcssAnimate from "tailwindcss-animate" // Adicionado import para tailwindcss-animate
+import tailwindcssAnimate from "tailwindcss-animate"
 
 const config = {
   darkMode: ["class"],
   content: [
-    "./index.html", // Adiciona o arquivo HTML principal
-    "./src/**/*.{js,ts,jsx,tsx}", // Escaneia todos os arquivos relevantes dentro da pasta src
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   prefix: "",
   theme: {
@@ -102,14 +102,19 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "infinite-scroll": "infinite-scroll 80s linear infinite",
       },
     },
   },
-  plugins: [tailwindcssAnimate], // Alterado de require para a variável importada
+  plugins: [tailwindcssAnimate],
 } satisfies Config
 
 export default config
