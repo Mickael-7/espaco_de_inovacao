@@ -7,8 +7,9 @@ import { StaggerItem } from "../animations/stagger-item"
 import { StatCard } from "../components/stat-card"
 import { ProgramCard } from "../components/program-card"
 import { NewsCard } from "../components/news-card"
-import { PartnerLogo } from "../components/partner-logo"
 import { Button } from "../components/ui/button"
+import { ParceirosGrid } from "../components/ParceirosGrid"
+import { parceirosEmpresariais } from "../data/parceiros"
 
 export default function Home() {
   return (
@@ -222,13 +223,7 @@ export default function Home() {
             </p>
           </FadeIn>
 
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            {Array.from({ length: 12 }).map((_, i) => (
-              <StaggerItem key={i}>
-                <PartnerLogo name={`Parceiro ${i + 1}`} />
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+          <ParceirosGrid parceiros={parceirosEmpresariais} />
 
           <FadeIn delay={0.4} className="flex justify-center mt-10">
             <Link to="/parceiros">
