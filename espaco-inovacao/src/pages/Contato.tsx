@@ -11,6 +11,7 @@ export default function ContatoPage() {
       <PageHeader
         title="Entre em Contato"
         subtitle="Estamos aqui para ajudar você a fazer parte do nosso ecossistema de inovação"
+        videoSrc="https://res.cloudinary.com/dydrdwjwb/video/upload/v1750777786/1236-144355017_whw98q.mp4"
       />
 
       {/* Informações de Contato e Formulário */}
