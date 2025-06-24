@@ -15,6 +15,7 @@ export default function ProgramasPage() {
       <PageHeader
         title="Nossos Programas"
         subtitle="Conheça as iniciativas que impulsionam o ecossistema de inovação"
+        videoSrc="https://res.cloudinary.com/dydrdwjwb/video/upload/v1750777786/1236-144355017_whw98q.mp4"
       />
 
       {/* Programas Principais */}
