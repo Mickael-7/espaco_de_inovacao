@@ -10,7 +10,10 @@ import { EcosystemCard } from "../components/ecosystem-card";
 export default function EcossistemaPage() {
   return (
     <PageTransition>
-      <PageHeader title="Ecossistema de Inovação" subtitle="Conheça os atores e as conexões que formam nosso hub" />
+      <PageHeader title="Ecossistema de Inovação"
+       subtitle="Conheça os atores e as conexões que formam nosso hub"
+       videoSrc="https://res.cloudinary.com/dydrdwjwb/video/upload/v1750777786/1236-144355017_whw98q.mp4"
+       />
 
       {/* Visão Geral */}
       <section className="py-16 bg-white">
