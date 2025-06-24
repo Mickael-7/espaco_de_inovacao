@@ -10,7 +10,10 @@ import { TeamMember } from "../components/team-number"
 export default function SobrePage() {
   return (
     <PageTransition>
-      <PageHeader title="Sobre o Espaço Colinas de Inovação" subtitle="Conheça nossa história, missão e valores" />
+      <PageHeader title="Sobre o Espaço Colinas de Inovação"
+       subtitle="Conheça nossa história, missão e valores"
+       videoSrc="https://res.cloudinary.com/dydrdwjwb/video/upload/v1750777786/1236-144355017_whw98q.mp4"
+       />
 
       {/* História */}
       <section className="py-16 bg-white">
